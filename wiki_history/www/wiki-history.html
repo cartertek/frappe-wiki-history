@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Page history · Frappe Wiki</title>
+  <link rel="stylesheet" href="/assets/wiki_history/css/history.css">
+  <script defer src="/assets/wiki_history/js/history_page.js"></script>
+</head>
+<body>
+  <main id="history" class="container">
+    <header class="toolbar">
+      <a id="back" href="/wiki-app" class="back">← Back to Wiki page</a>
+      <span class="app-label">WIKI HISTORY</span>
+    </header>
+    <h1>Revision history</h1>
+    <p class="subtitle" id="page-title">Loading page…</p>
+    <p id="notice" role="status" aria-live="polite">Loading revision history…</p>
+    <section id="history-section" hidden aria-label="Revision history">
+      <div class="section-heading">
+        <h2>Page history</h2>
+        <p>Select the old and new versions, then compare. Open a revision to see the saved page.</p>
+      </div>
+      <div class="table-wrap">
+        <table class="revisions">
+          <thead><tr><th scope="col">Old</th><th scope="col">New</th><th scope="col">Revision</th><th scope="col">What changed</th></tr></thead>
+          <tbody id="revision-rows"></tbody>
+        </table>
+      </div>
+      <div class="actions">
+        <button type="button" id="compare-selected" class="primary">Compare selected revisions</button>
+        <button type="button" id="load-more" hidden>Load more</button>
+        <span id="count"></span>
+      </div>
+    </section>
+    <section id="detail" hidden aria-label="Revision details">
+      <div class="section-heading detail-heading">
+        <h2 id="detail-title">Revision comparison</h2>
+        <button type="button" id="close-detail">Close comparison</button>
+      </div>
+      <div id="detail-subtitle" class="subtitle"></div>
+      <div id="metadata" hidden>
+        <h3>Page properties changed</h3>
+        <div id="metadata-rows"></div>
+      </div>
+      <div id="diff-view" hidden>
+        <h3>Content changes</h3>
+        <div class="diff-scroll"><table class="diff" aria-label="Text differences"><tbody id="diff-rows"></tbody></table></div>
+      </div>
+      <div id="snapshot-view" hidden>
+        <h3>Saved page content</h3>
+        <p class="subtitle">Historical Markdown source, displayed without modifying the page.</p>
+        <pre id="snapshot"></pre>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
